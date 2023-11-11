@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="socialnetwork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="person" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:integer"/>
+              <xs:element name="firstname" type="xs:string"/>
+              <xs:element name="lastname" type="xs:string"/>
+              <xs:element name="birthdate" type="xs:date"/>
+              <xs:element name="address" type="xs:string"/>
+              <xs:element name="workplace" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="company" type="xs:string"/>
+                    <xs:element name="startdate" type="xs:date"/>
+                    <xs:element name="enddate" type="xs:date"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
